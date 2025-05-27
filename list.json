@@ -1,3 +1,21 @@
 {
-  "all": []
+  "all": [
+    {
+      "id": "online-metadata",
+      "name": "Online Metadata",
+      "description": "{description}",
+      "version": "0.2.1",
+      "author": "",
+      "grant": [
+        "internet"
+      ],
+      "license": "Apache-2.0",
+      "categories": [],
+      "tags": [],
+      "homepage": "https://github.com/any-listen/any-listen-extension-online-metadata#readme",
+      "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0rggENU2JbXgYGoQBIyqlBJP76mgMKh85gRIUsAwoq/Oj7qEoKYX9jqtnRgAwEPIV7aLMQxGryfm9fGlohDcUPtcF6za5l6L9Szd+0McOCxZSY98/pPFdTYnBHRHPrHHYqzqs4y5wPqpFFNrt2z312YS4xy3SYHkooNPxL0OscxejeG9KtmXQmMdejm2MxOIuItlqGHpdwInlvY8Wm/gOMvBmPVffsMaNB412xSZA25D3gRNZRO6O28+S2pXRdSbmFX6DLWQ/xRDJW1QnfbtjbAJ7Xo1X1anS/NEKRpZqHidjjWI43rL/LhcIAt45a1MkxpBEO+1yCivaNCFE5jyQwIDAQAB",
+      "icon": "https://raw.githubusercontent.com/any-listen/any-listen-extension-store/main/extensions/online-metadata/icon.svg",
+      "download_url": "https://github.com/any-listen/any-listen-extension-online-metadata/releases/download/v0.2.1/online-metadata_v0.2.1.alix"
+    }
+  ]
 }

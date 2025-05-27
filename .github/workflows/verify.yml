@@ -9,14 +9,18 @@ jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
       - name: Install Node.js
         uses: actions/setup-node@v4
 
-      - name: Install and Run Sync Script (verify only)
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install Dependencies
         run: |
           cd scripts
           npm ci
+
+      - name: Sync Extensions Data
+        run: |
+          cd scripts
           node index.js

@@ -28,10 +28,14 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Sync Extensions Data
+      - name: Install Dependencies
         run: |
           cd scripts
           npm ci
+
+      - name: Sync Extensions Data
+        run: |
+          cd scripts
           node index.js
 
       - name: Commit and Push Changes if Any

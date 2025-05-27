@@ -31,7 +31,7 @@ jobs:
       - name: Sync Extensions Data
         run: |
           cd scripts
-          npm install
+          npm ci
           node index.js
 
       - name: Commit and Push Changes if Any

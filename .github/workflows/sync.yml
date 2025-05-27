@@ -8,7 +8,8 @@ on:
     # paths:
     #   - "extensions/**"
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: "30 5 * * *"
+    # - cron: "0 */6 * * *"
 
 jobs:
   Sync:

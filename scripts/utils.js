@@ -3,6 +3,8 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { request, interceptors, getGlobalDispatcher, setGlobalDispatcher } from 'undici'
 
+export const dataDir = path.join(import.meta.dirname, '../datas')
+
 const defaultOptions = {
   timeout: 15000,
   headers: {
@@ -26,7 +28,7 @@ const dispatchers = [
 ]
 setGlobalDispatcher(getGlobalDispatcher().compose(...dispatchers))
 
-const tempDir = path.join(import.meta.dirname, '../temp')
+const tempDir = path.join(import.meta.dirname, 'temp')
 fs.mkdirSync(tempDir, { recursive: true })
 
 export const getVersionInfo = async (url) => {

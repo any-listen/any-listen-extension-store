@@ -1,11 +1,11 @@
 import fs from 'node:fs'
 import path from 'node:path'
-import { checkDownloadUrl, getVersionInfo, parseExtMetadata } from './utils.js'
+import { dataDir, checkDownloadUrl, getVersionInfo, parseExtMetadata } from './utils.js'
 
 const metaFileName = 'meta.json'
 const i18nMessageKeys = ['description']
 
-const listPath = path.join(import.meta.dirname, '../list.json')
+const listPath = path.join(dataDir, 'list.json')
 const list = JSON.parse(fs.readFileSync(listPath, 'utf-8').toString()).all
 const listMap = new Map()
 const i18nMessages = {}
@@ -18,7 +18,7 @@ for (const lang of fs.readdirSync(path.join(import.meta.dirname, '../i18n-common
 
 const registry = {}
 const oldRegistry = {}
-const registryPath = path.join(import.meta.dirname, '../registry')
+const registryPath = path.join(dataDir, 'registry')
 if (fs.existsSync(registryPath)) {
   for (const name of fs.readdirSync(registryPath)) {
     const filePath = path.join(registryPath, name)
@@ -30,9 +30,9 @@ fs.rmSync(registryPath, { recursive: true, force: true })
 fs.mkdirSync(registryPath, { recursive: true })
 
 const oldI18nMessages = {}
-if (fs.existsSync(path.join(import.meta.dirname, '../i18n'))) {
-  for (const lang of fs.readdirSync(path.join(import.meta.dirname, '../i18n'))) {
-    const langPath = path.join(import.meta.dirname, '../i18n', lang)
+if (fs.existsSync(path.join(dataDir, 'i18n'))) {
+  for (const lang of fs.readdirSync(path.join(dataDir, 'i18n'))) {
+    const langPath = path.join(dataDir, 'i18n', lang)
     if (lang.endsWith('.json')) {
       const messages = JSON.parse(fs.readFileSync(langPath, 'utf-8').toString() || '{}')
       oldI18nMessages[lang.replace('.json', '')] = messages
@@ -163,7 +163,7 @@ const parseExtensionDir = async (dir) => {
 }
 
 const run = async () => {
-  fs.rmSync(path.join(import.meta.dirname, '../i18n'), { recursive: true, force: true })
+  fs.rmSync(path.join(dataDir, 'i18n'), { recursive: true, force: true })
   for (const name of extensionDir) {
     try {
       await parseExtensionDir(path.join(extensionsDirPath, name))
@@ -175,13 +175,11 @@ const run = async () => {
   for (const [name, ext] of Object.entries(registry)) {
     await fs.promises.writeFile(path.join(registryPath, `${name}.json`), JSON.stringify(ext, null, 2))
   }
-  fs.mkdirSync(path.join(import.meta.dirname, '../i18n'), { recursive: true })
+  fs.mkdirSync(path.join(dataDir, 'i18n'), { recursive: true })
   for (const [lang, messages] of Object.entries(i18nMessages)) {
-    await fs.promises
-      .writeFile(path.join(import.meta.dirname, `../i18n/${lang}.json`), JSON.stringify(messages, null, 2))
-      .catch((err) => {
-        console.error(`Error writing i18n file for ${lang}:`, err)
-      })
+    await fs.promises.writeFile(path.join(dataDir, `i18n/${lang}.json`), JSON.stringify(messages, null, 2)).catch((err) => {
+      console.error(`Error writing i18n file for ${lang}:`, err)
+    })
   }
 }
 

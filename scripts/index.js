@@ -10,8 +10,8 @@ const list = JSON.parse(fs.readFileSync(listPath, 'utf-8').toString()).all
 const listMap = new Map()
 const i18nMessages = {}
 for (const ext of list) listMap.set(ext.id, ext)
-for (const lang of fs.readdirSync(path.join(import.meta.dirname, '../i18n-common'))) {
-  const langPath = path.join(import.meta.dirname, '../i18n-common', lang)
+for (const lang of fs.readdirSync(path.join(import.meta.dirname, '../i18n'))) {
+  const langPath = path.join(import.meta.dirname, '../i18n', lang)
   const messages = JSON.parse(fs.readFileSync(langPath, 'utf-8').toString())
   i18nMessages[lang.replace('.json', '')] = messages
 }

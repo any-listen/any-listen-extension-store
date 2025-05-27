@@ -1,0 +1,24 @@
+{
+  "prettier.useEditorConfig": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": "explicit",
+    "source.fixAll.eslint": "explicit"
+  },
+  "i18n-ally.localesPaths": ["i18n-common"],
+  // "i18n-ally.fullReloadOnChanged": true,
+  "i18n-ally.keystyle": "flat",
+  "i18n-ally.displayLanguage": "zh-cn",
+  "i18n-ally.sourceLanguage": "zh-cn",
+  "i18n-ally.translate.engines": [
+    "deepl",
+    "google-cn",
+    "google",
+    "openai",
+    "libretranslate"
+  ],
+  "i18n-ally.sortKeys": true,
+  "i18n-ally.review.enabled": false,
+  "i18n-ally.review.gutters": false
+}

@@ -1,0 +1,44 @@
+name: Sync Extensions Data
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    # paths:
+    #   - "extensions/**"
+  schedule:
+    - cron: "0 */6 * * *"
+
+jobs:
+  Sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set Git Identity
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Sync Extensions Data
+        run: |
+          cd scripts
+          npm install
+          node index.js
+
+      - name: Commit and Push Changes if Any
+        run: |
+          git add .
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: sync extension data [auto]"
+            git push
+          fi

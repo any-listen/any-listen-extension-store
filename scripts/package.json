@@ -1,0 +1,10 @@
+{
+  "name": "any-listen-extension-scripts",
+  "version": "0.1.0",
+  "type": "module",
+  "devDependencies": {
+    "prettier": "^3.5.3",
+    "tar": "^7.4.3",
+    "undici": "^7.10.0"
+  }
+}

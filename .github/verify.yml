@@ -1,0 +1,22 @@
+name: Verify Extensions Data
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+
+      - name: Install and Run Sync Script (verify only)
+        run: |
+          cd scripts
+          npm install
+          node index.js

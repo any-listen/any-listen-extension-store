@@ -1,0 +1,57 @@
+{
+  "id": "online-metadata",
+  "name": "Online Metadata",
+  "description": "{description}",
+  "icon": "https://raw.githubusercontent.com/any-listen/any-listen-extension-store/main/extensions/online-metadata/icon.svg",
+  "version": "0.2.2",
+  "author": "",
+  "homepage": "https://github.com/any-listen/any-listen-extension-online-metadata#readme",
+  "license": "Apache-2.0",
+  "categories": [],
+  "tags": [],
+  "grant": [
+    "internet"
+  ],
+  "contributes": {
+    "resource": [
+      {
+        "id": "kw",
+        "name": "{kwName}",
+        "resource": [
+          "musicSearch",
+          "musicPic",
+          "musicLyric"
+        ]
+      },
+      {
+        "id": "tx",
+        "name": "{txName}",
+        "resource": [
+          "musicSearch",
+          "musicPic",
+          "musicLyric"
+        ]
+      },
+      {
+        "id": "wy",
+        "name": "{wyName}",
+        "resource": [
+          "musicSearch",
+          "musicPic",
+          "musicLyric"
+        ]
+      },
+      {
+        "id": "kg",
+        "name": "{kgName}",
+        "resource": [
+          "musicSearch",
+          "musicPic",
+          "musicLyric"
+        ]
+      }
+    ]
+  },
+  "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0rggENU2JbXgYGoQBIyqlBJP76mgMKh85gRIUsAwoq/Oj7qEoKYX9jqtnRgAwEPIV7aLMQxGryfm9fGlohDcUPtcF6za5l6L9Szd+0McOCxZSY98/pPFdTYnBHRHPrHHYqzqs4y5wPqpFFNrt2z312YS4xy3SYHkooNPxL0OscxejeG9KtmXQmMdejm2MxOIuItlqGHpdwInlvY8Wm/gOMvBmPVffsMaNB412xSZA25D3gRNZRO6O28+S2pXRdSbmFX6DLWQ/xRDJW1QnfbtjbAJ7Xo1X1anS/NEKRpZqHidjjWI43rL/LhcIAt45a1MkxpBEO+1yCivaNCFE5jyQwIDAQAB",
+  "download_url": "https://github.com/any-listen/any-listen-extension-online-metadata/releases/download/v0.2.2/online-metadata_v0.2.2.alix"
+}

@@ -8,7 +8,9 @@ on:
     # paths:
     #   - "extensions/**"
   schedule:
-    - cron: "30 5 * * *"
+    # Run at 21:30 UTC every day, which is 05:30 GMT+8
+    - cron: "30 21 * * *"
+    # - cron: "30 5 * * *"
     # - cron: "0 */6 * * *"
 
 jobs:

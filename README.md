@@ -1,12 +1,18 @@
 # Any Listen extension store
 
+English | [简体中文](docs/README.zh-CN.md)
+
 This is the extension store repository for the Any Listen project. This repository is used to store and provide the data required for Any Listen's online extension functionality.
 
 ## Creating your extension
 
 We provide project templates to help you quickly create extensions
 
-*Project templates are still in preparation...*
+```bash
+npm create @any-listen/extension@latest
+# or
+pnpm create @any-listen/extension@latest
+```
 
 ## Publishing your extension
 

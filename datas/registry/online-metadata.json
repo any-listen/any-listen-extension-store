@@ -3,8 +3,8 @@
   "name": "Online Metadata",
   "description": "{description}",
   "icon": "https://raw.githubusercontent.com/any-listen/any-listen-extension-store/main/extensions/online-metadata/icon.png",
-  "version": "0.2.11",
-  "target_engine": "1.1.1",
+  "version": "0.3.1",
+  "target_engine": "1.2.0",
   "author": "",
   "homepage": "https://github.com/any-listen/any-listen-extension-online-metadata#readme",
   "license": "Apache-2.0",
@@ -21,7 +21,11 @@
         "resource": [
           "musicSearch",
           "musicPic",
-          "musicLyric"
+          "musicLyric",
+          "songlistSearch",
+          "songlist",
+          "tipSearch",
+          "hotSearch"
         ]
       },
       {
@@ -30,7 +34,11 @@
         "resource": [
           "musicSearch",
           "musicPic",
-          "musicLyric"
+          "musicLyric",
+          "songlistSearch",
+          "songlist",
+          "tipSearch",
+          "hotSearch"
         ]
       },
       {
@@ -39,7 +47,11 @@
         "resource": [
           "musicSearch",
           "musicPic",
-          "musicLyric"
+          "musicLyric",
+          "songlistSearch",
+          "songlist",
+          "tipSearch",
+          "hotSearch"
         ]
       },
       {
@@ -48,11 +60,28 @@
         "resource": [
           "musicSearch",
           "musicPic",
-          "musicLyric"
+          "musicLyric",
+          "songlistSearch",
+          "songlist",
+          "tipSearch",
+          "hotSearch"
+        ]
+      },
+      {
+        "id": "mg",
+        "name": "{mgName}",
+        "resource": [
+          "musicSearch",
+          "musicPic",
+          "musicLyric",
+          "songlistSearch",
+          "songlist",
+          "tipSearch",
+          "hotSearch"
         ]
       }
     ]
   },
   "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0rggENU2JbXgYGoQBIyqlBJP76mgMKh85gRIUsAwoq/Oj7qEoKYX9jqtnRgAwEPIV7aLMQxGryfm9fGlohDcUPtcF6za5l6L9Szd+0McOCxZSY98/pPFdTYnBHRHPrHHYqzqs4y5wPqpFFNrt2z312YS4xy3SYHkooNPxL0OscxejeG9KtmXQmMdejm2MxOIuItlqGHpdwInlvY8Wm/gOMvBmPVffsMaNB412xSZA25D3gRNZRO6O28+S2pXRdSbmFX6DLWQ/xRDJW1QnfbtjbAJ7Xo1X1anS/NEKRpZqHidjjWI43rL/LhcIAt45a1MkxpBEO+1yCivaNCFE5jyQwIDAQAB",
-  "download_url": "https://github.com/any-listen/any-listen-extension-online-metadata/releases/download/v0.2.11/online-metadata_v0.2.11.alix"
+  "download_url": "https://github.com/any-listen/any-listen-extension-online-metadata/releases/download/v0.3.1/online-metadata_v0.3.1.alix"
 }

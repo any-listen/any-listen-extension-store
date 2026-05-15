@@ -1,4 +1,4 @@
 {
   "tag_music_metadata": "Song metadata",
-  "online-metadata.description": "Match online song covers, lyrics from playing songs"
+  "online-metadata.description": "Match online song covers and lyrics from played songs, and query public online resources on certain platforms"
 }

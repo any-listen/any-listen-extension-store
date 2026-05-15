@@ -1,0 +1,66 @@
+{
+  "id": "lx-api-source-loader",
+  "name": "LX Music API Source Loader",
+  "description": "{description}",
+  "icon": "https://raw.githubusercontent.com/any-listen/any-listen-extension-store/main/extensions/lx-api-source-loader/icon.png",
+  "version": "0.1.1",
+  "target_engine": "1.1.2",
+  "author": "",
+  "homepage": "https://github.com/any-listen/any-listen-extension-lx-api-source-loader#readme",
+  "license": "Apache-2.0",
+  "categories": [],
+  "tags": [],
+  "grant": [
+    "internet"
+  ],
+  "contributes": {
+    "resource": [
+      {
+        "id": "kw",
+        "name": "{kwName}",
+        "resource": [
+          "musicUrl"
+        ]
+      },
+      {
+        "id": "tx",
+        "name": "{txName}",
+        "resource": [
+          "musicUrl"
+        ]
+      },
+      {
+        "id": "wy",
+        "name": "{wyName}",
+        "resource": [
+          "musicUrl"
+        ]
+      },
+      {
+        "id": "kg",
+        "name": "{kgName}",
+        "resource": [
+          "musicUrl"
+        ]
+      },
+      {
+        "id": "mg",
+        "name": "{mgName}",
+        "resource": [
+          "musicUrl"
+        ]
+      }
+    ],
+    "settings": [
+      {
+        "field": "enabledCache",
+        "name": "{settings.enabledCache}",
+        "description": "{settings.enabledCacheDescription}",
+        "type": "boolean",
+        "default": false
+      }
+    ]
+  },
+  "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvYgKIDZU+hhb/4y0ZQKO82GU7+9Sevkp+CrYws9zBcEU2WqZRC7KZf8A/vP0I6HR8bTGUYHvzBLg+Qnt5bxWZrd67NkqmMCtmbD+6WyA4wxFi5lDyNpt/d90nYPh4gkfa+J2nozinZgUFL3l6bStgZAB85bl+L3+2M0mx2rP8gIhMv442km7OxOSvud+YKaWV/3uiUfy2RE9VVlHVBcumszjzoogmo9zdhcuB/6Q9mgefi9Gc0VVEF2D/t8YVzxOH7vhGcK2aLcqrpNwrn9nFIyXe4V3Zz3myNKmFKjhjaFOWYXSQN6+KfkB0VZA2lhpbegkHskJ9i694EWr00MivwIDAQAB",
+  "download_url": "https://github.com/any-listen/any-listen-extension-lx-api-source-loader/releases/download/v0.1.1/lx-api-source-loader_v0.1.1.alix"
+}

@@ -1,4 +1,5 @@
 {
   "tag_music_metadata": "歌曲元信息",
+  "lx-api-source-loader.description": "用于加载 LX Music 音乐源脚本",
   "online-metadata.description": "从播放的歌曲匹配在线歌曲封面、歌词，查询某些平台的公开在线资源"
 }

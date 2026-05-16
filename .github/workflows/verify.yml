@@ -23,4 +23,4 @@ jobs:
       - name: Sync Extensions Data
         run: |
           cd scripts
-          node index.js
+          node index.ts

@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+    "lib": ["ESNext"],
+    "allowJs": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": false,
+    "module": "nodenext",
+    "checkJs": true,
+    "moduleResolution": "nodenext",
+    "composite": true,
+    "noEmit": true,
+    "allowSyntheticDefaultImports": true,
+    "types": ["@types/node"]
+  },
+  "include": ["scripts"]
+}

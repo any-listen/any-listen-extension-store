@@ -35,6 +35,12 @@ declare global {
         date?: Date
         history?: VersionInfo[]
       }
+
+      interface MetaInfo {
+        id: string
+        version_info_url?: string
+        package_name?: string
+      }
     }
   }
 }

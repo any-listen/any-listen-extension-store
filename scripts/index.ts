@@ -148,7 +148,7 @@ const parseExtensionDir = async (dir: string) => {
     console.warn(`No meta.json found in ${dir}`)
     return
   }
-  const metaContent = JSON.parse((await fs.promises.readFile(meta, 'utf-8')).toString())
+  const metaContent = JSON.parse((await fs.promises.readFile(meta, 'utf-8')).toString()) as AnyListen.Store.MetaInfo
   if (metaContent.version_info_url) {
     await parseVersionByInfoUrl(metaContent.id, metaContent.version_info_url)
   } else if (metaContent.package_name) {

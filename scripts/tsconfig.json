@@ -12,7 +12,8 @@
     "composite": true,
     "noEmit": true,
     "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": true,
     "types": ["@types/node"]
   },
-  "include": ["scripts"]
+  "include": ["./**/*"]
 }

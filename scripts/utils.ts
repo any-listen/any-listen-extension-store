@@ -133,6 +133,13 @@ const buildPath = async (extensionPath: string, _path: string) => {
   const enterFilePath = path.join(extensionPath, _path)
   if (!enterFilePath.startsWith(extensionPath + path.sep)) throw new Error('main path illegal')
   if (!(await checkFile(enterFilePath))) return ''
+  // check file size, if larger than 1MB, return empty string
+  const stats = await fs.promises.stat(enterFilePath)
+  if (stats.size > 1 * 1024 * 1024) {
+    // TODO: resize image
+    console.warn(`File ${enterFilePath} is larger than 1MB, skipping`)
+    return ''
+  }
   return enterFilePath
 }
 type Contributes = NonNullable<AnyListen.Extension.Manifest['contributes']>

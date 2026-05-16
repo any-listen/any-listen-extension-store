@@ -1,4 +1,5 @@
 {
   "tag_music_metadata": "Song metadata",
+  "lx-api-source-loader.description": "Script for loading LX Music music source",
   "online-metadata.description": "Match online song covers and lyrics from played songs, and query public online resources on certain platforms"
 }

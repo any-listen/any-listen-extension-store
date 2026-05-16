@@ -1,0 +1,117 @@
+{
+  "id": "lx-api-source-loader",
+  "name": "LX Music API Source Loader",
+  "description": "{description}",
+  "icon": "https://raw.githubusercontent.com/any-listen/any-listen-extension-store/main/extensions/lx-api-source-loader/icon.png",
+  "version": "0.1.3",
+  "target_engine": "1.1.2",
+  "author": "",
+  "homepage": "https://github.com/any-listen/any-listen-extension-lx-api-source-loader#readme",
+  "license": "Apache-2.0",
+  "categories": [],
+  "tags": [],
+  "grant": [
+    "internet",
+    "isolate_context"
+  ],
+  "contributes": {
+    "resource": [
+      {
+        "id": "kw",
+        "name": "{kwName}",
+        "resource": [
+          "musicUrl"
+        ]
+      },
+      {
+        "id": "tx",
+        "name": "{txName}",
+        "resource": [
+          "musicUrl"
+        ]
+      },
+      {
+        "id": "wy",
+        "name": "{wyName}",
+        "resource": [
+          "musicUrl"
+        ]
+      },
+      {
+        "id": "kg",
+        "name": "{kgName}",
+        "resource": [
+          "musicUrl"
+        ]
+      },
+      {
+        "id": "mg",
+        "name": "{mgName}",
+        "resource": [
+          "musicUrl"
+        ]
+      }
+    ],
+    "settings": [
+      {
+        "type": "boolean",
+        "field": "enabledCache",
+        "name": "{settings.enabledCache}",
+        "description": "{settings.enabledCacheDescription}",
+        "default": false
+      },
+      {
+        "type": "boolean",
+        "field": "enabledSourceLogout",
+        "name": "{settings.enabledSourceLogout}",
+        "description": "{settings.enabledSourceLogoutDescription}",
+        "default": false
+      },
+      {
+        "type": "configCheckboxMultiple",
+        "field": "enabledScripts",
+        "name": "{settings.scriptSources}",
+        "description": "{settings.scriptSourcesDescription}",
+        "max": 3,
+        "enumConfigFiled": "importedScriptSources",
+        "enumFiled": "id",
+        "enumNameFiled": "name",
+        "enumDescriptionFiled": "fileDesc",
+        "removeable": true,
+        "actionCommands": [
+          "addLocalSource",
+          "addRemoteSource",
+          "exportSources"
+        ],
+        "actionCommandNames": [
+          "{settings.addLocalSource}",
+          "{settings.addRemoteSource}",
+          "{command.exportSourcesName}"
+        ]
+      }
+    ],
+    "commands": [
+      {
+        "command": "addLocalSource",
+        "name": "{command.addLocalSourceName}",
+        "description": "{command.addLocalSourceDescription}",
+        "hidden": false
+      },
+      {
+        "command": "addRemoteSource",
+        "name": "{command.addRemoteSourceName}",
+        "description": "{command.addRemoteSourceDescription}",
+        "hidden": false
+      },
+      {
+        "command": "exportSources",
+        "name": "{command.exportSourcesName}",
+        "description": "{command.exportSourcesDescription}",
+        "hidden": false
+      }
+    ]
+  },
+  "main": "main.js",
+  "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAs03Kki8AzLwzAIkQBP5Lpo7E5WZz8C79kpwTUS34lor2anCj1s+FWV/jMH4X29S0oK9vAv718SQ1z8bQiEWcd/XuXq/9x06o8GejP6nV9njCwVNXE8pC2/+JXYwt355aCViUgnVWRih+nQlLQ2DvP0Vot9R5fbQCbPItKc0DEsyoORl3TCg1BM6ZZVvBRrrWwIKESHBXm/Cj9hxjZAX0KiiyA1RzamFaIzyRdR1BdHF7QlhDIyy0IspchWtIiF8GTmXaYxEkJCGTwNca/2JJMn3zO3tMnTzUwfZtx4zpz66z+8kQhY6AjAPmW1kVevmo+DZFmCFbzOu/DWNEMXDVTQIDAQAB",
+  "download_url": "https://github.com/any-listen/any-listen-extension-lx-api-source-loader/releases/download/v0.1.3/lx-api-source-loader_v0.1.3.alix"
+}

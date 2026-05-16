@@ -17,6 +17,25 @@
       "icon": "https://raw.githubusercontent.com/any-listen/any-listen-extension-store/main/extensions/online-metadata/icon.png",
       "download_url": "https://github.com/any-listen/any-listen-extension-online-metadata/releases/download/v0.3.2/online-metadata_v0.3.2.alix",
       "target_engine": "1.2.0"
+    },
+    {
+      "id": "lx-api-source-loader",
+      "name": "LX Music API Source Loader",
+      "description": "{description}",
+      "version": "0.1.3",
+      "author": "",
+      "grant": [
+        "internet",
+        "isolate_context"
+      ],
+      "license": "Apache-2.0",
+      "target_engine": "1.1.2",
+      "categories": [],
+      "tags": [],
+      "homepage": "https://github.com/any-listen/any-listen-extension-lx-api-source-loader#readme",
+      "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAs03Kki8AzLwzAIkQBP5Lpo7E5WZz8C79kpwTUS34lor2anCj1s+FWV/jMH4X29S0oK9vAv718SQ1z8bQiEWcd/XuXq/9x06o8GejP6nV9njCwVNXE8pC2/+JXYwt355aCViUgnVWRih+nQlLQ2DvP0Vot9R5fbQCbPItKc0DEsyoORl3TCg1BM6ZZVvBRrrWwIKESHBXm/Cj9hxjZAX0KiiyA1RzamFaIzyRdR1BdHF7QlhDIyy0IspchWtIiF8GTmXaYxEkJCGTwNca/2JJMn3zO3tMnTzUwfZtx4zpz66z+8kQhY6AjAPmW1kVevmo+DZFmCFbzOu/DWNEMXDVTQIDAQAB",
+      "icon": "https://raw.githubusercontent.com/any-listen/any-listen-extension-store/main/extensions/lx-api-source-loader/icon.png",
+      "download_url": "https://github.com/any-listen/any-listen-extension-lx-api-source-loader/releases/download/v0.1.3/lx-api-source-loader_v0.1.3.alix"
     }
   ]
 }

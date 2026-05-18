@@ -1,0 +1,65 @@
+{
+  "id": "gdstudio",
+  "name": "GD音乐台",
+  "description": "使用GDStudio插件接口实现的音乐插件，支持网易云音乐、酷我音乐、JOOX和QQ音乐等多个平台的音乐搜索、播放和歌词显示功能。",
+  "icon": "https://raw.githubusercontent.com/any-listen/any-listen-extension-store/main/extensions/gdstudio/icon.png",
+  "version": "0.1.2",
+  "target_engine": "1.1.2",
+  "author": "e^iπ=-1",
+  "homepage": "https://github.com/morpheus315/gdstudio-repo#readme",
+  "license": "Apache-2.0",
+  "categories": [],
+  "tags": [],
+  "grant": [
+    "internet",
+    "player",
+    "music_list"
+  ],
+  "contributes": {
+    "resource": [
+      {
+        "id": "netease",
+        "name": "网易云音乐",
+        "resource": [
+          "musicSearch",
+          "musicUrl",
+          "musicPic",
+          "musicLyric"
+        ]
+      },
+      {
+        "id": "kuwo",
+        "name": "酷我音乐",
+        "resource": [
+          "musicSearch",
+          "musicUrl",
+          "musicPic",
+          "musicLyric"
+        ]
+      },
+      {
+        "id": "joox",
+        "name": "JOOX",
+        "resource": [
+          "musicSearch",
+          "musicUrl",
+          "musicPic",
+          "musicLyric"
+        ]
+      },
+      {
+        "id": "tencent",
+        "name": "QQ音乐",
+        "resource": [
+          "musicSearch",
+          "musicUrl",
+          "musicPic",
+          "musicLyric"
+        ]
+      }
+    ]
+  },
+  "main": "main.js",
+  "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxLxQDOf77NMZtB0ZwD3/pFjLjB0zdk4cmDCyDOXNkmF5hpW/KidYjLZdCtCRYWdJ+NEQ+AdEE+JB6uWxOZmN/6Wbb7cvAZuDL5eYt2TeFVjr5GPtTvHgYplM5+tPDlx/6RbSWgzZliT7IOxIQnTzvb7j8zGvb6cQ3cuQe3weRSzIU3O3Sh+2BJEinL3zNHcDstCa4J6Uy7+81ZYVUyQux7iygN9Baka4Ty2rPb06MF+bxqThoG8m0qHdrVn5UENGOXSuagi2/fNNSmGtiWAaSlz4rX/wO8ztESEW0QWnPyD9Ys1NKYp8roYbEKjVnvYhXW9fDNszkvKq9PsZ2MdUXwIDAQAB",
+  "download_url": "https://github.com/morpheus315/gdstudio-repo/releases/download/v0.1.2/gdstudio_v0.1.2.alix"
+}

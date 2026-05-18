@@ -36,6 +36,26 @@
       "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAs03Kki8AzLwzAIkQBP5Lpo7E5WZz8C79kpwTUS34lor2anCj1s+FWV/jMH4X29S0oK9vAv718SQ1z8bQiEWcd/XuXq/9x06o8GejP6nV9njCwVNXE8pC2/+JXYwt355aCViUgnVWRih+nQlLQ2DvP0Vot9R5fbQCbPItKc0DEsyoORl3TCg1BM6ZZVvBRrrWwIKESHBXm/Cj9hxjZAX0KiiyA1RzamFaIzyRdR1BdHF7QlhDIyy0IspchWtIiF8GTmXaYxEkJCGTwNca/2JJMn3zO3tMnTzUwfZtx4zpz66z+8kQhY6AjAPmW1kVevmo+DZFmCFbzOu/DWNEMXDVTQIDAQAB",
       "icon": "https://raw.githubusercontent.com/any-listen/any-listen-extension-store/main/extensions/lx-api-source-loader/icon.png",
       "download_url": "https://github.com/any-listen/any-listen-extension-lx-api-source-loader/releases/download/v0.1.6/lx-api-source-loader_v0.1.6.alix"
+    },
+    {
+      "id": "gdstudio",
+      "name": "GD音乐台",
+      "description": "使用GDStudio插件接口实现的音乐插件，支持网易云音乐、酷我音乐、JOOX和QQ音乐等多个平台的音乐搜索、播放和歌词显示功能。",
+      "version": "0.1.2",
+      "author": "e^iπ=-1",
+      "grant": [
+        "internet",
+        "player",
+        "music_list"
+      ],
+      "license": "Apache-2.0",
+      "target_engine": "1.1.2",
+      "categories": [],
+      "tags": [],
+      "homepage": "https://github.com/morpheus315/gdstudio-repo#readme",
+      "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxLxQDOf77NMZtB0ZwD3/pFjLjB0zdk4cmDCyDOXNkmF5hpW/KidYjLZdCtCRYWdJ+NEQ+AdEE+JB6uWxOZmN/6Wbb7cvAZuDL5eYt2TeFVjr5GPtTvHgYplM5+tPDlx/6RbSWgzZliT7IOxIQnTzvb7j8zGvb6cQ3cuQe3weRSzIU3O3Sh+2BJEinL3zNHcDstCa4J6Uy7+81ZYVUyQux7iygN9Baka4Ty2rPb06MF+bxqThoG8m0qHdrVn5UENGOXSuagi2/fNNSmGtiWAaSlz4rX/wO8ztESEW0QWnPyD9Ys1NKYp8roYbEKjVnvYhXW9fDNszkvKq9PsZ2MdUXwIDAQAB",
+      "icon": "https://raw.githubusercontent.com/any-listen/any-listen-extension-store/main/extensions/gdstudio/icon.png",
+      "download_url": "https://github.com/morpheus315/gdstudio-repo/releases/download/v0.1.2/gdstudio_v0.1.2.alix"
     }
   ]
 }

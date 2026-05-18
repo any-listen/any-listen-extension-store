@@ -18,7 +18,7 @@ pnpm create @any-listen/extension@latest
 
 1. Fork 本仓库
 2. 在 `extensions/<Extension ID>` 目录下新增 `meta.json` 文件
-3. 提交 PR
+3. 提交 PR， **并附上该扩展的功能说明**
 
 ### `meta.json` 文件说明
 

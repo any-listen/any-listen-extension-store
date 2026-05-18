@@ -18,7 +18,7 @@ pnpm create @any-listen/extension@latest
 
 1. Fork this repository
 2. Add a `meta.json` file in the `extensions/<Extension ID>` directory
-3. Submit a PR
+3. Submit a PR, **and include a functional description of the extension**
 
 ### `meta.json` file description
 

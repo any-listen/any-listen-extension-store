@@ -119,13 +119,16 @@ const buildListItem = (
     update_timestamp,
   }
 }
-
+const formatDate = (date: Date) => {
+  const d = new Date(date).getTime()
+  return isNaN(d) ? Date.now() : d
+}
 const parseVersionByInfoUrl = async (id: string, url: string) => {
   const versionInfo = await getVersionInfo(url)
   if (!versionInfo.version) throw new Error(`Version info not found for [${id}] at ${url}`)
   if (!versionInfo.download_url) throw new Error(`Download URL not found for [${id}] at ${url}`)
   const targetExt = listMap.get(id)
-  const updateTimestamp = versionInfo.date ? new Date(versionInfo.date).getTime() : Date.now()
+  const updateTimestamp = versionInfo.date ? formatDate(versionInfo.date) : Date.now()
   if (targetExt) {
     if (targetExt.version === versionInfo.version) {
       cpI18nMessages(id)

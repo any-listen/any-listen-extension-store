@@ -3,7 +3,6 @@ import path from 'node:path'
 import { dataDir, checkDownloadUrl, getVersionInfo, parseExtMetadata } from './utils.ts'
 
 const metaFileName = 'meta.json'
-const i18nMessageKeys = ['description']
 
 const listPath = path.join(dataDir, 'list.json')
 const list = JSON.parse(fs.readFileSync(listPath, 'utf-8').toString()).all
@@ -43,11 +42,41 @@ if (fs.existsSync(path.join(dataDir, 'i18n'))) {
 const extensionsDirPath = path.join(import.meta.dirname, '../extensions')
 const extensionDir = fs.readdirSync(extensionsDirPath)
 
-const mergeI18nMessages = (id: string, i18n: AnyListen.Store.I18nMessages) => {
+const geti18nMessageKeys = (ext: AnyListen.Extension.Manifest) => {
+  const i18nMessageKeys = ['{description}']
+  if (ext.contributes) {
+    if (ext.contributes.commands) {
+      for (const cmd of ext.contributes.commands) {
+        i18nMessageKeys.push(cmd.name)
+      }
+    }
+    if (ext.contributes.settings) {
+      for (const setting of ext.contributes.settings) {
+        i18nMessageKeys.push(setting.name)
+        if (setting.description) i18nMessageKeys.push(setting.description)
+      }
+    }
+    if (ext.contributes.resource) {
+      for (const resource of ext.contributes.resource) {
+        i18nMessageKeys.push(resource.name)
+      }
+    }
+    if (ext.contributes.listProviders) {
+      for (const provider of ext.contributes.listProviders) {
+        i18nMessageKeys.push(provider.name)
+        if (provider.description) i18nMessageKeys.push(provider.description)
+      }
+    }
+  }
+
+  return i18nMessageKeys.map((key) => key.replace(/{([\w-.]+)}/g, '$1'))
+}
+const mergeI18nMessages = (ext: AnyListen.Extension.Manifest, i18n: AnyListen.Store.I18nMessages) => {
+  const id = ext.id
   for (const [lang, msgs] of Object.entries(i18n)) {
     let messages = i18nMessages[lang]
     if (!messages) messages = i18nMessages[lang] = {}
-    for (const key of i18nMessageKeys) {
+    for (const key of geti18nMessageKeys(ext)) {
       if (!msgs[key]) continue
       messages[`${id}.${key}`] = msgs[key]
     }
@@ -63,7 +92,13 @@ const cpI18nMessages = (id: string) => {
     }
   }
 }
-const buildListItem = (ext: AnyListen.Extension.Manifest, download_url: string): AnyListen.Store.ExtensionListItem => {
+const buildListItem = (
+  ext: AnyListen.Extension.Manifest,
+  download_url: string,
+  sha256: string,
+  create_timestamp: number,
+  update_timestamp: number
+): AnyListen.Store.ExtensionListItem => {
   return {
     id: ext.id,
     name: ext.name,
@@ -79,6 +114,9 @@ const buildListItem = (ext: AnyListen.Extension.Manifest, download_url: string):
     publicKey: ext.publicKey,
     icon: ext.icon,
     download_url,
+    sha256,
+    create_timestamp,
+    update_timestamp,
   }
 }
 
@@ -87,6 +125,7 @@ const parseVersionByInfoUrl = async (id: string, url: string) => {
   if (!versionInfo.version) throw new Error(`Version info not found for [${id}] at ${url}`)
   if (!versionInfo.download_url) throw new Error(`Download URL not found for [${id}] at ${url}`)
   const targetExt = listMap.get(id)
+  const updateTimestamp = versionInfo.date ? new Date(versionInfo.date).getTime() : Date.now()
   if (targetExt) {
     if (targetExt.version === versionInfo.version) {
       cpI18nMessages(id)
@@ -94,27 +133,43 @@ const parseVersionByInfoUrl = async (id: string, url: string) => {
       if (await checkDownloadUrl(registry[id].download_url)) return
     }
     console.log(`Extension [${targetExt.name}] (${id}) version updated: ${targetExt.version} -> ${versionInfo.version}`)
-    const [ext, i18n] = await parseExtMetadata(versionInfo.download_url, targetExt.publicKey)
+    const [ext, i18n, sha256] = await parseExtMetadata(versionInfo.download_url, targetExt.publicKey)
     if (ext.id != id) throw new Error(`Extension ID mismatch: expected [${id}], got [${ext.id}]`)
-    registry[id] = { ...ext, download_url: versionInfo.download_url }
-    Object.assign(targetExt, buildListItem(ext, versionInfo.download_url))
-    mergeI18nMessages(id, i18n)
+    registry[id] = {
+      ...ext,
+      download_url: versionInfo.download_url,
+      sha256,
+      create_timestamp: targetExt.create_timestamp || updateTimestamp,
+      update_timestamp: updateTimestamp,
+    }
+    Object.assign(
+      targetExt,
+      buildListItem(ext, versionInfo.download_url, sha256, targetExt.create_timestamp || updateTimestamp, updateTimestamp)
+    )
+    mergeI18nMessages(ext, i18n)
   } else {
     console.log(`Extension [${id}] not exist in list.json, adding`)
-    const [ext, i18n] = await parseExtMetadata(versionInfo.download_url)
+    const [ext, i18n, sha256] = await parseExtMetadata(versionInfo.download_url)
     if (ext.id != id) throw new Error(`Extension ID mismatch: expected [${id}], got [${ext.id}]`)
-    const listItem = buildListItem(ext, versionInfo.download_url)
-    registry[id] = { ...ext, download_url: versionInfo.download_url }
+    const listItem = buildListItem(ext, versionInfo.download_url, sha256, updateTimestamp, updateTimestamp)
+    registry[id] = {
+      ...ext,
+      download_url: versionInfo.download_url,
+      sha256,
+      create_timestamp: updateTimestamp,
+      update_timestamp: updateTimestamp,
+    }
     list.push(listItem)
     listMap.set(ext.id, listItem)
-    mergeI18nMessages(id, i18n)
+    mergeI18nMessages(ext, i18n)
   }
 }
 
 const parseVersionByPkgPath = async (id: string, url: string) => {
   const targetExt = listMap.get(id)
+  const updateTimestamp = Date.now()
   if (targetExt) {
-    const [ext, i18n] = await parseExtMetadata(url, targetExt.publicKey)
+    const [ext, i18n, sha256] = await parseExtMetadata(url, targetExt.publicKey)
     if (ext.id != id) throw new Error(`Extension ID mismatch: expected [${id}], got [${ext.id}]`)
     if (targetExt.version === ext.version) {
       cpI18nMessages(id)
@@ -123,19 +178,28 @@ const parseVersionByPkgPath = async (id: string, url: string) => {
     }
     console.log(`Extension [${targetExt.name}] (${id}) version updated: ${targetExt.version} -> ${ext.version}`)
     const download_url = `https://raw.githubusercontent.com/any-listen/any-listen-extension-store/main/extensions/${id}/${path.basename(url)}`
-    registry[id] = { ...ext, download_url }
-    Object.assign(targetExt, buildListItem(ext, download_url))
-    mergeI18nMessages(id, i18n)
+    registry[id] = {
+      ...ext,
+      download_url,
+      sha256,
+      update_timestamp: updateTimestamp,
+      create_timestamp: targetExt.create_timestamp || updateTimestamp,
+    }
+    Object.assign(
+      targetExt,
+      buildListItem(ext, download_url, sha256, targetExt.create_timestamp || updateTimestamp, updateTimestamp)
+    )
+    mergeI18nMessages(ext, i18n)
   } else {
-    const [ext, i18n] = await parseExtMetadata(url)
+    const [ext, i18n, sha256] = await parseExtMetadata(url)
     if (ext.id != id) throw new Error(`Extension ID mismatch: expected [${id}], got [${ext.id}]`)
     console.log(`Extension [${id}] not found in list.json, adding`)
     const download_url = `https://raw.githubusercontent.com/any-listen/any-listen-extension-store/main/extensions/${id}/${path.basename(url)}`
-    registry[id] = { ...ext, download_url }
-    const listItem = buildListItem(ext, download_url)
+    registry[id] = { ...ext, download_url, sha256, update_timestamp: updateTimestamp, create_timestamp: updateTimestamp }
+    const listItem = buildListItem(ext, download_url, sha256, updateTimestamp, updateTimestamp)
     list.push(listItem)
     listMap.set(ext.id, listItem)
-    mergeI18nMessages(id, i18n)
+    mergeI18nMessages(ext, i18n)
   }
 }
 

@@ -19,11 +19,17 @@ declare global {
         publicKey: Extension.Manifest['publicKey']
         icon: Extension.Manifest['icon']
         target_engine: Extension.Manifest['target_engine']
+        sha256: string
         download_url: string
+        update_timestamp: number
+        create_timestamp: number
       }
 
       interface ExtensionRegistryItem extends Extension.Manifest {
+        sha256: string
         download_url: string
+        update_timestamp: number
+        create_timestamp: number
       }
 
       type I18nMessages = Record<string, Record<string, string>>

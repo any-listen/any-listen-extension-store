@@ -1,4 +1,4 @@
-import { randomUUID, createVerify } from 'node:crypto'
+import { randomUUID, createVerify, createHash } from 'node:crypto'
 import fs from 'node:fs'
 import path from 'node:path'
 import type { TarOptionsWithAliases } from 'tar'
@@ -508,6 +508,16 @@ const verifyExtension = async (
 }
 const getFileStats = async (path: string) => fs.promises.stat(path).catch(() => null)
 const removePath = async (path: string) => fs.promises.rm(path, { recursive: true })
+export const fileSha256 = async (filePath: string) => {
+  const hash = createHash('sha256')
+  const stream = fs.createReadStream(filePath)
+  return new Promise<string>((resolve, reject) => {
+    stream.on('data', (chunk) => hash.update(chunk))
+    stream.on('end', () => resolve(hash.digest('hex')))
+    stream.on('error', (err) => reject(err))
+  })
+}
+
 const parseManifest = async (bundlePath: string, publicKey?: string) => {
   const targetDir = bundlePath.replace(FILE_EXT_NAME_EXP, '')
   await fs.promises.mkdir(targetDir, { recursive: true })
@@ -517,7 +527,7 @@ const parseManifest = async (bundlePath: string, publicKey?: string) => {
   })
   const [ext, i18nMessages] = await verifyExtension(targetDir)
   if (publicKey && ext.publicKey != publicKey) throw new Error('Public key mismatch')
-  return [ext, i18nMessages] as const
+  return [ext, i18nMessages, await fileSha256(bundlePath)] as const
 }
 
 export const parseExtMetadata = async (url: string, publicKey?: string) => {

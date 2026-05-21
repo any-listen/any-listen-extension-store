@@ -113,5 +113,8 @@
   },
   "main": "main.js",
   "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAs03Kki8AzLwzAIkQBP5Lpo7E5WZz8C79kpwTUS34lor2anCj1s+FWV/jMH4X29S0oK9vAv718SQ1z8bQiEWcd/XuXq/9x06o8GejP6nV9njCwVNXE8pC2/+JXYwt355aCViUgnVWRih+nQlLQ2DvP0Vot9R5fbQCbPItKc0DEsyoORl3TCg1BM6ZZVvBRrrWwIKESHBXm/Cj9hxjZAX0KiiyA1RzamFaIzyRdR1BdHF7QlhDIyy0IspchWtIiF8GTmXaYxEkJCGTwNca/2JJMn3zO3tMnTzUwfZtx4zpz66z+8kQhY6AjAPmW1kVevmo+DZFmCFbzOu/DWNEMXDVTQIDAQAB",
-  "download_url": "https://github.com/any-listen/any-listen-extension-lx-api-source-loader/releases/download/v0.1.6/lx-api-source-loader_v0.1.6.alix"
+  "download_url": "https://github.com/any-listen/any-listen-extension-lx-api-source-loader/releases/download/v0.1.6/lx-api-source-loader_v0.1.6.alix",
+  "sha256": "3340c8b66e55a5d0cab7ad0791f5d0e5d0cf68c6c0a483c3fc75422529520f87",
+  "create_timestamp": 1779105476032,
+  "update_timestamp": 1779105476032
 }

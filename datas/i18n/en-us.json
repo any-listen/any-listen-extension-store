@@ -1,5 +1,24 @@
 {
   "tag_music_metadata": "Song metadata",
   "lx-api-source-loader.description": "Used to load LX Music custom source script",
-  "online-metadata.description": "Match online song covers and lyrics from played songs, and query public online resources on certain platforms"
+  "lx-api-source-loader.command.addLocalSourceName": "Import local custom source files",
+  "lx-api-source-loader.command.addRemoteSourceName": "Import online custom source files",
+  "lx-api-source-loader.command.exportSourcesName": "Export all custom sources",
+  "lx-api-source-loader.settings.enabledCache": "Enable song cache",
+  "lx-api-source-loader.settings.enabledCacheDescription": "When a song link is successfully retrieved, the song will also be cached in the cache directory",
+  "lx-api-source-loader.settings.enabledSourceLogout": "Enable source log output",
+  "lx-api-source-loader.settings.enabledSourceLogoutDescription": "Log output from the source",
+  "lx-api-source-loader.settings.scriptSources": "custom source",
+  "lx-api-source-loader.settings.scriptSourcesDescription": "Configure LX Music custom sources to be enabled, priority will be determined based on the order of enablement",
+  "lx-api-source-loader.kwName": "Kuwo",
+  "lx-api-source-loader.txName": "Tencent",
+  "lx-api-source-loader.wyName": "NetEase",
+  "lx-api-source-loader.kgName": "KuGou",
+  "lx-api-source-loader.mgName": "Migu",
+  "online-metadata.description": "Match online song covers and lyrics from played songs, and query public online resources on certain platforms",
+  "online-metadata.kgName": "KuGou",
+  "online-metadata.kwName": "Kuwo",
+  "online-metadata.wyName": "NetEase",
+  "online-metadata.txName": "Tencent",
+  "online-metadata.mgName": "Migu music"
 }

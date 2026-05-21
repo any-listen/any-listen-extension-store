@@ -16,7 +16,10 @@
       "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0rggENU2JbXgYGoQBIyqlBJP76mgMKh85gRIUsAwoq/Oj7qEoKYX9jqtnRgAwEPIV7aLMQxGryfm9fGlohDcUPtcF6za5l6L9Szd+0McOCxZSY98/pPFdTYnBHRHPrHHYqzqs4y5wPqpFFNrt2z312YS4xy3SYHkooNPxL0OscxejeG9KtmXQmMdejm2MxOIuItlqGHpdwInlvY8Wm/gOMvBmPVffsMaNB412xSZA25D3gRNZRO6O28+S2pXRdSbmFX6DLWQ/xRDJW1QnfbtjbAJ7Xo1X1anS/NEKRpZqHidjjWI43rL/LhcIAt45a1MkxpBEO+1yCivaNCFE5jyQwIDAQAB",
       "icon": "https://raw.githubusercontent.com/any-listen/any-listen-extension-store/main/extensions/online-metadata/icon.png",
       "download_url": "https://github.com/any-listen/any-listen-extension-online-metadata/releases/download/v0.3.3/online-metadata_v0.3.3.alix",
-      "target_engine": "1.2.0"
+      "target_engine": "1.2.0",
+      "sha256": "ed897f1336d09013e718ec3d2424fd1cb6b558db107e8be1f42b5de921d47856",
+      "create_timestamp": 1779105422434,
+      "update_timestamp": 1779105422434
     },
     {
       "id": "lx-api-source-loader",
@@ -35,7 +38,10 @@
       "homepage": "https://github.com/any-listen/any-listen-extension-lx-api-source-loader#readme",
       "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAs03Kki8AzLwzAIkQBP5Lpo7E5WZz8C79kpwTUS34lor2anCj1s+FWV/jMH4X29S0oK9vAv718SQ1z8bQiEWcd/XuXq/9x06o8GejP6nV9njCwVNXE8pC2/+JXYwt355aCViUgnVWRih+nQlLQ2DvP0Vot9R5fbQCbPItKc0DEsyoORl3TCg1BM6ZZVvBRrrWwIKESHBXm/Cj9hxjZAX0KiiyA1RzamFaIzyRdR1BdHF7QlhDIyy0IspchWtIiF8GTmXaYxEkJCGTwNca/2JJMn3zO3tMnTzUwfZtx4zpz66z+8kQhY6AjAPmW1kVevmo+DZFmCFbzOu/DWNEMXDVTQIDAQAB",
       "icon": "https://raw.githubusercontent.com/any-listen/any-listen-extension-store/main/extensions/lx-api-source-loader/icon.png",
-      "download_url": "https://github.com/any-listen/any-listen-extension-lx-api-source-loader/releases/download/v0.1.6/lx-api-source-loader_v0.1.6.alix"
+      "download_url": "https://github.com/any-listen/any-listen-extension-lx-api-source-loader/releases/download/v0.1.6/lx-api-source-loader_v0.1.6.alix",
+      "sha256": "3340c8b66e55a5d0cab7ad0791f5d0e5d0cf68c6c0a483c3fc75422529520f87",
+      "create_timestamp": 1779105476032,
+      "update_timestamp": 1779105476032
     },
     {
       "id": "gdstudio",
@@ -55,7 +61,10 @@
       "homepage": "https://github.com/morpheus315/gdstudio-repo#readme",
       "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxLxQDOf77NMZtB0ZwD3/pFjLjB0zdk4cmDCyDOXNkmF5hpW/KidYjLZdCtCRYWdJ+NEQ+AdEE+JB6uWxOZmN/6Wbb7cvAZuDL5eYt2TeFVjr5GPtTvHgYplM5+tPDlx/6RbSWgzZliT7IOxIQnTzvb7j8zGvb6cQ3cuQe3weRSzIU3O3Sh+2BJEinL3zNHcDstCa4J6Uy7+81ZYVUyQux7iygN9Baka4Ty2rPb06MF+bxqThoG8m0qHdrVn5UENGOXSuagi2/fNNSmGtiWAaSlz4rX/wO8ztESEW0QWnPyD9Ys1NKYp8roYbEKjVnvYhXW9fDNszkvKq9PsZ2MdUXwIDAQAB",
       "icon": "https://raw.githubusercontent.com/any-listen/any-listen-extension-store/main/extensions/gdstudio/icon.png",
-      "download_url": "https://github.com/morpheus315/gdstudio-repo/releases/download/v0.1.3/gdstudio_v0.1.3.alix"
+      "download_url": "https://github.com/morpheus315/gdstudio-repo/releases/download/v0.1.3/gdstudio_v0.1.3.alix",
+      "sha256": "6752d7bfc565717cce14f755adcb04e94345ad3c4dc8adcf6b0c658d6d623956",
+      "create_timestamp": 1779157505854,
+      "update_timestamp": 1779157505854
     }
   ]
 }

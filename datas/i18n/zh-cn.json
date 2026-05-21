@@ -1,5 +1,24 @@
 {
   "tag_music_metadata": "歌曲元信息",
   "lx-api-source-loader.description": "用于加载 LX Music 自定义源脚本",
-  "online-metadata.description": "从播放的歌曲匹配在线歌曲封面、歌词，查询某些平台的公开在线资源"
+  "lx-api-source-loader.command.addLocalSourceName": "导入本地自定义源文件",
+  "lx-api-source-loader.command.addRemoteSourceName": "导入在线自定义源文件",
+  "lx-api-source-loader.command.exportSourcesName": "导出所有自定义源",
+  "lx-api-source-loader.settings.enabledCache": "启用歌曲缓存",
+  "lx-api-source-loader.settings.enabledCacheDescription": "当歌曲链接获取成功时，同时将歌曲缓存到缓存目录",
+  "lx-api-source-loader.settings.enabledSourceLogout": "启用源日志输出",
+  "lx-api-source-loader.settings.enabledSourceLogoutDescription": "记录源输出的日志",
+  "lx-api-source-loader.settings.scriptSources": "自定义源",
+  "lx-api-source-loader.settings.scriptSourcesDescription": "配置要启用的 LX Music 自定义源，优先级将根据启用的顺序来确定",
+  "lx-api-source-loader.kwName": "酷我音乐",
+  "lx-api-source-loader.txName": "企鹅音乐",
+  "lx-api-source-loader.wyName": "网易音乐",
+  "lx-api-source-loader.kgName": "酷狗音乐",
+  "lx-api-source-loader.mgName": "咪咕音乐",
+  "online-metadata.description": "从播放的歌曲匹配在线歌曲封面、歌词，查询某些平台的公开在线资源",
+  "online-metadata.kgName": "酷狗音乐",
+  "online-metadata.kwName": "酷我音乐",
+  "online-metadata.wyName": "网易音乐",
+  "online-metadata.txName": "企鹅音乐",
+  "online-metadata.mgName": "咪咕音乐"
 }

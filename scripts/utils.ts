@@ -72,6 +72,7 @@ const RESOURCE = [
   'musicPic',
   'musicLyric',
   'musicUrl',
+  'musicComment',
   'musicPicSearch',
   'songlistSearch',
   'songlist',

@@ -3,8 +3,8 @@
   "name": "Online Metadata",
   "description": "{description}",
   "icon": "https://raw.githubusercontent.com/any-listen/any-listen-extension-store/main/extensions/online-metadata/icon.png",
-  "version": "0.4.1",
-  "target_engine": "1.2.0",
+  "version": "0.4.2",
+  "target_engine": "1.3.0",
   "author": "",
   "homepage": "https://github.com/any-listen/any-listen-extension-online-metadata#readme",
   "license": "Apache-2.0",
@@ -26,7 +26,8 @@
           "songlist",
           "topSongs",
           "tipSearch",
-          "hotSearch"
+          "hotSearch",
+          "musicComment"
         ]
       },
       {
@@ -40,7 +41,8 @@
           "songlist",
           "topSongs",
           "tipSearch",
-          "hotSearch"
+          "hotSearch",
+          "musicComment"
         ]
       },
       {
@@ -54,7 +56,8 @@
           "songlist",
           "topSongs",
           "tipSearch",
-          "hotSearch"
+          "hotSearch",
+          "musicComment"
         ]
       },
       {
@@ -68,7 +71,8 @@
           "songlist",
           "topSongs",
           "tipSearch",
-          "hotSearch"
+          "hotSearch",
+          "musicComment"
         ]
       },
       {
@@ -82,15 +86,16 @@
           "songlist",
           "topSongs",
           "tipSearch",
-          "hotSearch"
+          "hotSearch",
+          "musicComment"
         ]
       }
     ]
   },
   "main": "main.js",
   "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0rggENU2JbXgYGoQBIyqlBJP76mgMKh85gRIUsAwoq/Oj7qEoKYX9jqtnRgAwEPIV7aLMQxGryfm9fGlohDcUPtcF6za5l6L9Szd+0McOCxZSY98/pPFdTYnBHRHPrHHYqzqs4y5wPqpFFNrt2z312YS4xy3SYHkooNPxL0OscxejeG9KtmXQmMdejm2MxOIuItlqGHpdwInlvY8Wm/gOMvBmPVffsMaNB412xSZA25D3gRNZRO6O28+S2pXRdSbmFX6DLWQ/xRDJW1QnfbtjbAJ7Xo1X1anS/NEKRpZqHidjjWI43rL/LhcIAt45a1MkxpBEO+1yCivaNCFE5jyQwIDAQAB",
-  "download_url": "https://github.com/any-listen/any-listen-extension-online-metadata/releases/download/v0.4.1/online-metadata_v0.4.1.alix",
-  "sha256": "00a43bc592c304d86423f67ddc4ae08a7b0709f587e531039ca423b7e58f59d0",
+  "download_url": "https://github.com/any-listen/any-listen-extension-online-metadata/releases/download/v0.4.2/online-metadata_v0.4.2.alix",
+  "sha256": "7cd6ee6c32370f3eeeba9e0b36a3690dda410b32739c64a0cd6b3041f7dd43f1",
   "create_timestamp": 1779105422434,
-  "update_timestamp": 1780163992077
+  "update_timestamp": 1780813488318
 }

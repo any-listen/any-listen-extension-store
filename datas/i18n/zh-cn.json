@@ -15,6 +15,8 @@
   "lx-api-source-loader.wyName": "网易音乐",
   "lx-api-source-loader.kgName": "酷狗音乐",
   "lx-api-source-loader.mgName": "咪咕音乐",
+  "lx-list-transform.description": "将 LX Music 的列表数据转换成 Any Listen 列表数据",
+  "lx-list-transform.list_transform": "转换 LX Music 列表数据",
   "online-metadata.description": "从播放的歌曲匹配在线歌曲封面、歌词，查询某些平台的公开在线资源",
   "online-metadata.kgName": "酷狗音乐",
   "online-metadata.kwName": "酷我音乐",

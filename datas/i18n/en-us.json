@@ -15,6 +15,8 @@
   "lx-api-source-loader.wyName": "NetEase",
   "lx-api-source-loader.kgName": "KuGou",
   "lx-api-source-loader.mgName": "Migu",
+  "lx-list-transform.description": "Convert LX Music list data to Any Listen list data",
+  "lx-list-transform.list_transform": "Convert LX Music list data",
   "online-metadata.description": "Match online song covers and lyrics from played songs, and query public online resources on certain platforms",
   "online-metadata.kgName": "KuGou",
   "online-metadata.kwName": "Kuwo",

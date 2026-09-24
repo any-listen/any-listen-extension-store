@@ -120,6 +120,7 @@ declare global {
         main: string
         publicKey: string
         grant?: Grant[]
+        readme?: string
         contributes?: {
           resource?: Array<{
             id: string

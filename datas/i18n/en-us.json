@@ -17,6 +17,8 @@
   "lx-api-source-loader.mgName": "Migu",
   "lx-list-transform.description": "Convert LX Music list data to Any Listen list data",
   "lx-list-transform.list_transform": "Convert LX Music list data",
+  "lx-list-transform.settings.addListType": "Add song to list position",
+  "lx-list-transform.settings.addListTypeDescription": "This option is used to decide whether the songs at the top or bottom of the list were created more recently when converting the list.",
   "online-metadata.description": "Match online song covers and lyrics from played songs, and query public online resources on certain platforms",
   "online-metadata.kgName": "KuGou",
   "online-metadata.kwName": "Kuwo",

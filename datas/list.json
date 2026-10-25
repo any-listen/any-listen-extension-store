@@ -70,7 +70,7 @@
       "id": "lx-list-transform",
       "name": "LX Music List Transform",
       "description": "{description}",
-      "version": "0.1.1",
+      "version": "0.1.3",
       "grant": [],
       "license": "Apache-2.0",
       "target_engine": "1.4.0",
@@ -79,10 +79,10 @@
       "homepage": "https://github.com/any-listen/any-listen-extension-lx-list-transform#readme",
       "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxyRu/v43hNz8UqKePy3piqi3E7g/t89jIr3qzNVk6lGjedvuBhK23+ZtsYUoXbsgYIvIuBdRFCmlui40xtzYEhcbMS6j857PzN2zNnqLvGHw6hI1MMrjpzIVFX+SevvaRnthpT3v4PuP5ZCVClOMSOa4yqk/FK4Pkf44WUQACp2oShdqQekKCBsxjyqn59Xx9XP28alungVZWNF//PTYp+o0tIKf4DHqoULKrUQFo/SWQuiTT6i5rVhaFmLDUvBn7ntuFoRIXsyv1XhY7SNM5rnV26AR8UJEmTSP4WhXgawn9zzhK8rfBSLlmAZ+XSiaTqUKXjFzqn3PZ/heJ7CZXQIDAQAB",
       "icon": "https://raw.githubusercontent.com/any-listen/any-listen-extension-store/main/extensions/lx-list-transform/icon.png",
-      "download_url": "https://github.com/any-listen/any-listen-extension-lx-list-transform/releases/download/v0.1.1/lx-list-transform_v0.1.1.alix",
-      "sha256": "5fb0529449e688258122532eaa7d0f38d41773f7af1723a4b2bdcd83d89a96a8",
+      "download_url": "https://github.com/any-listen/any-listen-extension-lx-list-transform/releases/download/v0.1.3/lx-list-transform_v0.1.3.alix",
+      "sha256": "e276b086d1fc847e8bf3985e502c99c2f6a17b516ec0acd85b2d883ff7cffc7f",
       "create_timestamp": 1790226070061,
-      "update_timestamp": 1791282093521
+      "update_timestamp": 1792902158140
     }
   ]
 }

@@ -3,7 +3,7 @@
   "name": "Online Metadata",
   "description": "{description}",
   "icon": "https://raw.githubusercontent.com/any-listen/any-listen-extension-store/main/extensions/online-metadata/icon.png",
-  "version": "0.4.7",
+  "version": "0.4.8",
   "target_engine": "1.3.0",
   "author": "",
   "homepage": "https://github.com/any-listen/any-listen-extension-online-metadata#readme",
@@ -94,8 +94,8 @@
   },
   "main": "main.js",
   "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0rggENU2JbXgYGoQBIyqlBJP76mgMKh85gRIUsAwoq/Oj7qEoKYX9jqtnRgAwEPIV7aLMQxGryfm9fGlohDcUPtcF6za5l6L9Szd+0McOCxZSY98/pPFdTYnBHRHPrHHYqzqs4y5wPqpFFNrt2z312YS4xy3SYHkooNPxL0OscxejeG9KtmXQmMdejm2MxOIuItlqGHpdwInlvY8Wm/gOMvBmPVffsMaNB412xSZA25D3gRNZRO6O28+S2pXRdSbmFX6DLWQ/xRDJW1QnfbtjbAJ7Xo1X1anS/NEKRpZqHidjjWI43rL/LhcIAt45a1MkxpBEO+1yCivaNCFE5jyQwIDAQAB",
-  "download_url": "https://github.com/any-listen/any-listen-extension-online-metadata/releases/download/v0.4.7/online-metadata_v0.4.7.alix",
-  "sha256": "52d88fcc19fba34eaa1feb7f6b8d56e674295f5949c0e57c53503f1ebd144dcd",
+  "download_url": "https://github.com/any-listen/any-listen-extension-online-metadata/releases/download/v0.4.8/online-metadata_v0.4.8.alix",
+  "sha256": "846ce53771c8bbf12ff36c13299f0702e497f518f01bb61e1b1c0f2aea950e06",
   "create_timestamp": 1779105422434,
-  "update_timestamp": 1791281280971
+  "update_timestamp": 1792990147252
 }
